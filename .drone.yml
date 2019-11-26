@@ -3,9 +3,9 @@ kind: pipeline
 steps:
 - name: compile
   image: microsoft/aspnetcore-build
-  command:
+  commands:
   - sh build.sh
 - name: build-image:
   image: microsoft/aspnetcore-build
-  command:
+  commands:
   - docker build -t dinorows/dotnetcore-container ./Web
